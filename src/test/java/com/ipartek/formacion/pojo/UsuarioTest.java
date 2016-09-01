@@ -1,6 +1,6 @@
 package com.ipartek.formacion.pojo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,29 +10,29 @@ import org.junit.Test;
 
 public class UsuarioTest {
 
-	@BeforeClass
+	@BeforeClass()
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterClass()
 	public static void tearDownAfterClass() throws Exception {
 	}
 
-	@Before
+	@Before()
 	public void setUp() throws Exception {
 	}
 
-	@After
+	@After()
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	@Test()
 	public void constructorPorDefecto() {
 		Usuario u = new Usuario();
-		assertEquals( -1, u.getId() );
-		assertEquals( "", u.getNombre() );
-		assertEquals( "", u.getPassword() );
-		assertEquals( "", u.getEmail() );		
+		assertEquals(-1, u.getId());
+		assertEquals("", u.getNombre());
+		assertEquals("", u.getPassword());
+		assertEquals("", u.getEmail());		
 	}
 
 }
