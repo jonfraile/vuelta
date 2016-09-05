@@ -37,9 +37,19 @@ public class LoginServlet extends HttpServlet {
 
 	private void doProcess(HttpServletRequest request, HttpServletResponse response) {
 
+		// TODO trazas de LOG4J
+		// TODO filtro para backoffice
+
 		try {
 
-			request.getRequestDispatcher("backoffice.jsp").forward(request, response);
+			// recoger parametros del formulario
+			final String pNombre = request.getParameter("nombre");
+			final String pPass = request.getParameter("pass");
+
+			System.out.println("parametros: [" + pNombre + "," + pPass + "]");
+
+			request.setAttribute("mensaje", "Usario y contraseña incorrectos");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 
 		} catch (final Exception e) {
 
