@@ -54,7 +54,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 	}
 
 	@Override
-	public Usuario checkLogin(String nombre, String pass) {
+	public Usuario checkLogin(final String nombre, final String pass) {
 		Usuario u = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;

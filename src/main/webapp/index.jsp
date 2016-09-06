@@ -14,7 +14,7 @@
 	}
 %>
 
-<form action="login" method="get">
+<form action="login" method="post">
 	
 	<input type="text" name="nombre" placeholder="Tu Nombre" required>
 	<br>
