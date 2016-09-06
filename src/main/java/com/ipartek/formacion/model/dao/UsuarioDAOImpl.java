@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import com.ipartek.formacion.model.DataBaseConnectionImpl;
 import com.ipartek.formacion.pojo.Usuario;
 
@@ -98,6 +100,12 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		}
 
 		return u;
+	}
+
+	@Override
+	public void setDataSource(DataSource ds) {
+		// TODO CAmbiar conexion por DATASOURCE
+
 	}
 
 }

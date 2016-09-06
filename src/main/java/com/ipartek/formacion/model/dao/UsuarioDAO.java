@@ -2,9 +2,17 @@ package com.ipartek.formacion.model.dao;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import com.ipartek.formacion.pojo.Usuario;
 
 public interface UsuarioDAO {
+
+	/**
+	 * This is the method to be used to initialize database resources ie.
+	 * connection.
+	 */
+	public void setDataSource(DataSource ds);
 
 	/**
 	 * Modifica o Crea un nuevo {@code Usuario}, en funcion del atributo
@@ -26,7 +34,7 @@ public interface UsuarioDAO {
 
 	/**
 	 * Comprobar si {@code Usuario} existe en BBDD
-	 * 
+	 *
 	 * @param nombre
 	 *            {@code String} Nombre a buscar
 	 * @param pass
