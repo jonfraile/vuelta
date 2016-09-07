@@ -80,6 +80,8 @@ public class UsuarioDAOSpringTest {
 		final long id = usuario.getId();
 		assertNotNull(daoUsuario.buscarPorId(id));
 		daoUsuario.borrar(id);
+
+		assertNull(daoUsuario.buscarPorId(-1));
 	}
 
 	@Test

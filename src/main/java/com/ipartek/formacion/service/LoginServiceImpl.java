@@ -20,6 +20,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public Usuario checkLogin(String nombre, String password) {
+		// TODO inyectar DAO DE SPRING
 		final UsuarioDAOImpl daoUsuario = UsuarioDAOImpl.getInstance();
 		return daoUsuario.checkLogin(nombre, password);
 	}

@@ -3,6 +3,7 @@ package com.ipartek.formacion.model.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -75,14 +76,26 @@ public class UsuarioDAOSpring implements UsuarioDAO {
 
 	@Override
 	public Usuario buscarPorId(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario resul = null;
+		final String SQL = "select id, nombre, email, password from Usuario where id = ?";
+		try {
+			resul = this.jdbcTemplateObject.queryForObject(SQL, new Object[] { id }, new UsuarioMapper());
+		} catch (final EmptyResultDataAccessException e) {
+			resul = null;
+		}
+		return resul;
 	}
 
 	@Override
 	public List<Usuario> listar() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Usuario> resul = null;
+		final String SQL = "select id, nombre, email, password from Usuario order by id desc  limit 1000";
+		try {
+			resul = (ArrayList<Usuario>) this.jdbcTemplateObject.query(SQL, new UsuarioMapper());
+		} catch (final EmptyResultDataAccessException e) {
+			resul = new ArrayList<Usuario>();
+		}
+		return resul;
 	}
 
 	@Override
