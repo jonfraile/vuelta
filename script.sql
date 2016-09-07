@@ -25,14 +25,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(250) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla vc16.usuario: ~0 rows (aproximadamente)
 DELETE FROM `usuario`;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`id`, `nombre`, `password`, `email`) VALUES
-	(0, 'admin', 'admin', 'admin@admin.com'),
-	(1, 'dummy', '123456', 'dummy@dummy.com');
+INSERT INTO `usuario` (`nombre`, `password`, `email`) VALUES
+	( 'admin', 'admin', 'admin@admin.com'),
+	( 'dummy', '123456', 'dummy@dummy.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
