@@ -6,9 +6,9 @@
 	<br>
 	<input id="inputEmail" type="email" name="email" required placeholder="Tu Email" />
 	<br>
-	<input type="password" name="pass" required placeholder="Contrase�a" />
+	<input type="password" name="pass" required placeholder="Contraseña" />
 	<br>
-	<input type="password" name="repass" required placeholder="Repite Contrase�a" />
+	<input type="password" name="repass" required placeholder="Repite Contraseña" />
 
 	<br>
 	<input type="submit" value="Crear">
@@ -39,10 +39,10 @@
 	    		}).done(function( data ) {
 	    			if ( data.encontrado ){
 	    		    	console.debug("Existe email");
-	    		    	$("#inputEmail").css('color', 'green');
+	    		    	$("#inputEmail").css('color', 'red');
 	    			}else{
 	    				console.debug("NO Existe email");
-	    				$("#inputEmail").css('color', 'red');
+	    				$("#inputEmail").css('color', 'green');
 	    			}	
 	    		});
 	    	
