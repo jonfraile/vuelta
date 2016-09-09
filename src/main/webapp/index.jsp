@@ -25,3 +25,8 @@
 	<input type="submit" value="Login">
 
 </form>
+
+<br>
+
+
+<a href="formularioInscripcion.jsp">Crear nuevo usuario</a>
